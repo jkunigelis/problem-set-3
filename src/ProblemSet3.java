@@ -53,7 +53,9 @@ public class ProblemSet3 {
 	}
 	
 	public void fizzString(String str) {
-		
+		str = in.nextLine();
+		char firstLetter;
+		char lastLetter;
 	}
 		
 	public void squirrelPlay(int temp, boolean isSummer) {
