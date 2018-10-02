@@ -12,48 +12,43 @@
  * A parameter is data that is provided to the method. It helps the method do its job. It's passed in
  * through the parentheses, and you can reference these variables by name as if they're your own.
  */
-import java.util.Random;
+import java.util.Scanner;
 public class ProblemSet3 {
 	
 	/**
 	 * Make sure you're testing your code by calling your methods from the main method!
 	 */
-	
+	private static Scanner in = new Scanner(System.in);
 	public static void main(String[] args) {
-			
+			ProblemSet3 ps3 = new ProblemSet3();
+			System.out.println("Please input number for date.");
+			int date = in.nextInt();
+			System.out.println("Please input number for you.");
+			int you = in.nextInt();
+			ps3.dateFashion(date, you);
+			in.close();
 	}
 		
 	public void dateFashion(int you, int date) {
-		Random rand = new Random();
-		date = rand.nextInt(10) + 1;
-		you = rand.nextInt(10) + 1;
-		if (date > 7 && you < 2) {
-			System.out.println("Date is " + date + " and you are " + you);
-			System.out.println("NO");
-		}
-		if (you > 7 && date < 2) {
-			System.out.println("Date is " + date + " and you are " + you);
-			System.out.println("NO");
-		}
-		if (you > 7 && date > 2) {
-			System.out.println("Date is " + date + " and you are " + you);
-			System.out.println("YES");
-		}
-		if (date > 7 && you > 2) {
-			System.out.println("Date is " + date + " and you are " + you);
-			System.out.println("YES");
-		}
-		if (date < 2 && you < 2) {
-			System.out.println("Date is " + date + " and you are " + you);
-			System.out.println("NO");
-		}
-		if (date > 7 && you > 7) {
-			System.out.println("Date is " + date + " and you are " + you);
-			System.out.println("YES");
+		if (date < 0 || you < 0 || date > 10 || you > 10) {
+			System.out.println("ERROR NOT VALID");
 		}
 		else {
-			System.out.println("Date is " + date + " and you are " + you);
-			System.out.println("MAYBE");
+			if (date > 7 && you < 3) {
+				System.out.println("NO");
+			}
+			if (you > 7 && date < 3) {
+				System.out.println("NO");
+			}
+			if (date < 3 && you < 3) {
+				System.out.println("NO");
+			}
+			if (date > 7 && you > 7) {
+				System.out.println("YES");
+			}
+			if (you > 2 && you < 8 && date > 2 && date < 8) {
+				System.out.println("MAYBE");
+			}
 		}
 	}
 	
