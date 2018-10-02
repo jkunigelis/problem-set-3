@@ -12,7 +12,7 @@
  * A parameter is data that is provided to the method. It helps the method do its job. It's passed in
  * through the parentheses, and you can reference these variables by name as if they're your own.
  */
-
+import java.util.Random;
 public class ProblemSet3 {
 	
 	/**
@@ -24,7 +24,37 @@ public class ProblemSet3 {
 	}
 		
 	public void dateFashion(int you, int date) {
-		
+		Random rand = new Random();
+		date = rand.nextInt(10) + 1;
+		you = rand.nextInt(10) + 1;
+		if (date > 7 && you < 2) {
+			System.out.println("Date is " + date + " and you are " + you);
+			System.out.println("NO");
+		}
+		if (you > 7 && date < 2) {
+			System.out.println("Date is " + date + " and you are " + you);
+			System.out.println("NO");
+		}
+		if (you > 7 && date > 2) {
+			System.out.println("Date is " + date + " and you are " + you);
+			System.out.println("YES");
+		}
+		if (date > 7 && you > 2) {
+			System.out.println("Date is " + date + " and you are " + you);
+			System.out.println("YES");
+		}
+		if (date < 2 && you < 2) {
+			System.out.println("Date is " + date + " and you are " + you);
+			System.out.println("NO");
+		}
+		if (date > 7 && you > 7) {
+			System.out.println("Date is " + date + " and you are " + you);
+			System.out.println("YES");
+		}
+		else {
+			System.out.println("Date is " + date + " and you are " + you);
+			System.out.println("MAYBE");
+		}
 	}
 	
 	public void fizzString(String str) {
