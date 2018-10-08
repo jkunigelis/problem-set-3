@@ -29,7 +29,6 @@ public class ProblemSet3 {
 			System.out.println("Please input word.");
 		    String str = in.next();
 			ps3.fizzString(str);
-<<<<<<< HEAD
 			System.out.println("Please input temperature.");
 			int temp = in.nextInt();
 			System.out.println("Is it summer?");
@@ -38,8 +37,13 @@ public class ProblemSet3 {
 			System.out.println("Please input number");
 			int n = in.nextInt();
 			ps3.fizzStringAgain(n);
-=======
->>>>>>> 0095212a0606bcdb5bafbce4809ff77621fdda6e
+			System.out.println("Please input goal inches.");
+			int goal = in.nextInt();
+			System.out.println("Please input amount of small bricks.");
+			int small = in.nextInt();
+			System.out.println("Please input amount of big bricks");
+			int big = in.nextInt();
+			ps3.makeBricks(small, big, goal);
 			in.close();
 	}
 		
@@ -132,7 +136,13 @@ public class ProblemSet3 {
 	}
 	
 	public void makeBricks(int small, int big, int goal) {
-		
+		int inches = (small*1) + (big*5);
+		if (inches >= goal) {
+			System.out.println("YES");
+		}
+		else {
+			System.out.println("NO");
+		}
 	}
 	
 	public void loneSum(int a, int b, int c) {
