@@ -21,22 +21,32 @@ public class ProblemSet3 {
 	private static Scanner in = new Scanner(System.in);
 	public static void main(String[] args) {
 			ProblemSet3 ps3 = new ProblemSet3();
+			
+			//ex 1
 			System.out.println("Please input number for date.");
 			int date = in.nextInt();
 			System.out.println("Please input number for you.");
 			int you = in.nextInt();
 			ps3.dateFashion(date, you);
+			
+			//ex 2
 			System.out.println("Please input word.");
 		    String str = in.next();
 			ps3.fizzString(str);
+			
+			//ex 3
 			System.out.println("Please input temperature.");
 			int temp = in.nextInt();
 			System.out.println("Is it summer?");
 			boolean isSummer = in.nextBoolean();
 			ps3.squirrelPlay(temp, isSummer);
+			
+			//ex 4 
 			System.out.println("Please input number");
 			int n = in.nextInt();
 			ps3.fizzStringAgain(n);
+			
+			//ex 5
 			System.out.println("Please input goal inches.");
 			int goal = in.nextInt();
 			System.out.println("Please input amount of small bricks.");
@@ -44,6 +54,15 @@ public class ProblemSet3 {
 			System.out.println("Please input amount of big bricks");
 			int big = in.nextInt();
 			ps3.makeBricks(small, big, goal);
+			
+			//ex 6
+			System.out.println("Please input a number.");
+			int a = in.nextInt();
+			System.out.println("Please input a number.");
+			int b = in.nextInt();
+			System.out.println("Please input a number.");
+			int c = in.nextInt();
+			ps3.loneSum(a, b, c);
 			in.close();
 	}
 		
@@ -146,7 +165,38 @@ public class ProblemSet3 {
 	}
 	
 	public void loneSum(int a, int b, int c) {
+		if (a == b && a == c) {
+			System.out.println(a);
+		}
+		if (a == b && a != c) {
+			System.out.println(a + c);
+		}
+		if (a == c && a != b) {
+			System.out.println(a + b);
+		}
 		
+		
+		if (b == a && b == c) {
+			System.out.println(a);
+		}
+		if (b == a && b != c) {
+			System.out.println(a + c);
+		}
+		if (b == c && b != a) {
+			System.out.println(a + b);
+		}
+		
+		
+		
+		if (c == a && c == b) {
+			System.out.println(a);
+		}
+		if (c == a && c != b) {
+			System.out.println(a + c);
+		}
+		if (c == b && c != a) {
+			System.out.println(a + b);
+		}
 	}
 	
 	public void luckySum(int a, int b, int c) {
