@@ -29,6 +29,7 @@ public class ProblemSet3 {
 			System.out.println("Please input word.");
 		    String str = in.next();
 			ps3.fizzString(str);
+<<<<<<< HEAD
 			System.out.println("Please input temperature.");
 			int temp = in.nextInt();
 			System.out.println("Is it summer?");
@@ -37,6 +38,8 @@ public class ProblemSet3 {
 			System.out.println("Please input number");
 			int n = in.nextInt();
 			ps3.fizzStringAgain(n);
+=======
+>>>>>>> 0095212a0606bcdb5bafbce4809ff77621fdda6e
 			in.close();
 	}
 		
