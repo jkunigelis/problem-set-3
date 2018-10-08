@@ -26,6 +26,9 @@ public class ProblemSet3 {
 			System.out.println("Please input number for you.");
 			int you = in.nextInt();
 			ps3.dateFashion(date, you);
+			System.out.println("Please input word.");
+		    String str = in.next();
+			ps3.fizzString(str);
 			in.close();
 	}
 		
@@ -49,13 +52,35 @@ public class ProblemSet3 {
 			if (you > 2 && you < 8 && date > 2 && date < 8) {
 				System.out.println("MAYBE");
 			}
+			if (you < 3 && date > 2 && date < 8 || date < 3 && you > 2 && you < 8) {
+			    System.out.println("NO");
+			}
+			if (you > 7 && date > 2 && date < 8 || date > 7 && you > 2 && you < 8) {
+			    System.out.println("MAYBE");
+			}
 		}
 	}
 	
 	public void fizzString(String str) {
-		str = in.nextLine();
-		char firstLetter;
-		char lastLetter;
+	   int length1 = str.length();
+	   String firstLetter = str.substring(0,1);
+	   String lastLetter = str.substring((length1 - 1));
+	   if ((firstLetter.equals("f") || firstLetter.equals("F")) && (lastLetter.equals("b") || lastLetter.equals("B"))) {
+	       System.out.println("FIZZBUZZ");
+	   }
+	   else {
+    	   if (lastLetter.equals("b") || lastLetter.equals("B")) {
+    	        System.out.println("BUZZ");
+    	   }
+    	   else {
+    	       if (firstLetter.equals("f") || firstLetter.equals("F")) {
+        	       System.out.println("FIZZ");
+        	   }
+        	   else {
+        	       System.out.println(str);
+    	       }
+    	   }
+	   }
 	}
 		
 	public void squirrelPlay(int temp, boolean isSummer) {
