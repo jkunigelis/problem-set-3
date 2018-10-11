@@ -23,7 +23,7 @@ public class ProblemSet3 {
 			ProblemSet3 ps3 = new ProblemSet3();
 			
 			//ex 1
-			System.out.println("Please input number for date.");
+			/**System.out.println("Please input number for date.");
 			int date = in.nextInt();
 			System.out.println("Please input number for you.");
 			int you = in.nextInt();
@@ -53,7 +53,7 @@ public class ProblemSet3 {
 			int small = in.nextInt();
 			System.out.println("Please input amount of big bricks");
 			int big = in.nextInt();
-			ps3.makeBricks(small, big, goal);
+			ps3.makeBricks(small, big, goal);  **/
 			
 			//ex 6
 			System.out.println("Please input a number.");
@@ -174,28 +174,11 @@ public class ProblemSet3 {
 		if (a == c && a != b) {
 			System.out.println(a + b);
 		}
-		
-		
-		if (b == a && b == c) {
-			System.out.println(a);
-		}
-		if (b == a && b != c) {
-			System.out.println(a + c);
-		}
 		if (b == c && b != a) {
 			System.out.println(a + b);
 		}
-		
-		
-		
-		if (c == a && c == b) {
-			System.out.println(a);
-		}
-		if (c == a && c != b) {
-			System.out.println(a + c);
-		}
-		if (c == b && c != a) {
-			System.out.println(a + b);
+		if (a != b && b != c && a != c) {
+		    System.out.println(a + b + c);
 		}
 	}
 	
