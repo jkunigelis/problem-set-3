@@ -53,7 +53,7 @@ public class ProblemSet3 {
 			int small = in.nextInt();
 			System.out.println("Please input amount of big bricks");
 			int big = in.nextInt();
-			ps3.makeBricks(small, big, goal);  **/
+			ps3.makeBricks(small, big, goal);  
 			
 			//ex 6
 			System.out.println("Please input a number.");
@@ -62,7 +62,18 @@ public class ProblemSet3 {
 			int b = in.nextInt();
 			System.out.println("Please input a number.");
 			int c = in.nextInt();
-			ps3.loneSum(a, b, c);
+			ps3.loneSum(a, b, c); **/
+			
+			//ex 7
+			System.out.println("Please input a number.");
+			int a = in.nextInt();
+			System.out.println("Please input a number.");
+			int b = in.nextInt();
+			System.out.println("Please input a number.");
+			int c = in.nextInt();
+			ps3.luckySum(a, b, c);
+			
+			
 			in.close();
 	}
 		
@@ -183,7 +194,44 @@ public class ProblemSet3 {
 	}
 	
 	public void luckySum(int a, int b, int c) {
-		
+		if (a == 13 || b == 13 || c == 13) {
+		    
+		    // if all 13
+		    if (a == 13 && b == 13 && c == 13) {
+		        System.out.println("0");
+		    }
+		    
+		    //if a and b are 13
+		    if (a == 13 && b == a && a != c) {
+		        System.out.println("0");
+		    }
+		    
+		    //if b and c are 13
+		    if (b == 13 && b != a && b == c) {
+		        System.out.println(a);
+		    }
+		    
+		    //if a and c are 13
+		    if (a == 13 && b != a && a == c) {
+		        System.out.println("0");
+		    }
+		    
+		    //if none are same but one is 13
+		    if ((a == 13 && b != 13 && c != 13) || (b == 13 && a != 13 && c != 13) || (c == 13 && b != 13 && a != 13)) {
+		        if (a == 13) {
+    		        System.out.println("0");
+    		    }
+    		    if (b == 13) {
+    		        System.out.println(a);
+    		    }
+    		    if (c == 13) {
+    		        System.out.println(a + b);
+    		    }
+		    }
+		}
+		else {
+		    System.out.println(a + b + c);
+		}
 	}
 	
 	public void factorialWithFor(int n) {
