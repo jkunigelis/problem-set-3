@@ -74,29 +74,29 @@ public class ProblemSet3 {
 			//ex 7
 			System.out.println("Exercise 7");
 			System.out.println("Please input a number.");
-			int a = in.nextInt();
+			a = in.nextInt();
 			System.out.println("Please input a number.");
-			int b = in.nextInt();
+			b = in.nextInt();
 			System.out.println("Please input a number.");
-			int c = in.nextInt();
+			c = in.nextInt();
 			ps3.luckySum(a, b, c); 
 			
 			//ex 8
 			System.out.println("Exercise 8");
 			System.out.println("Please input a number.");
-			int n = in.nextInt();
+			n = in.nextInt();
 			ps3.factorialWithFor(n); 
 			
 			//ex 9
 			System.out.println("Exercise 9");
 			System.out.println("Please input a number.");
-			int n = in.nextInt();
+			n = in.nextInt();
 			ps3.factorialWithWhile(n);
 			
-			//ex 10
+			//ex 9
 			System.out.println("Exercise 10");
 			System.out.println("Please input a number.");
-			int n = in.nextInt();
+			n = in.nextInt();
 			ps3.isPrime(n);
 			
 			in.close();
