@@ -23,18 +23,22 @@ public class ProblemSet3 {
 			ProblemSet3 ps3 = new ProblemSet3();
 			
 			//ex 1
-			/**System.out.println("Please input number for date.");
+			
+			/**System.out.println("Exercise 1");
+			System.out.println("Please input number for date.");
 			int date = in.nextInt();
 			System.out.println("Please input number for you.");
 			int you = in.nextInt();
 			ps3.dateFashion(date, you);
 			
 			//ex 2
+			System.out.println("Exercise 2");
 			System.out.println("Please input word.");
 		    String str = in.next();
 			ps3.fizzString(str);
 			
 			//ex 3
+			System.out.println("Exercise 3");
 			System.out.println("Please input temperature.");
 			int temp = in.nextInt();
 			System.out.println("Is it summer?");
@@ -42,11 +46,13 @@ public class ProblemSet3 {
 			ps3.squirrelPlay(temp, isSummer);
 			
 			//ex 4 
+			System.out.println("Exercise 4");
 			System.out.println("Please input number");
 			int n = in.nextInt();
 			ps3.fizzStringAgain(n);
 			
 			//ex 5
+			System.out.println("Exercise 5");
 			System.out.println("Please input goal inches.");
 			int goal = in.nextInt();
 			System.out.println("Please input amount of small bricks.");
@@ -56,23 +62,36 @@ public class ProblemSet3 {
 			ps3.makeBricks(small, big, goal);  
 			
 			//ex 6
+			System.out.println("Exercise 6");
 			System.out.println("Please input a number.");
 			int a = in.nextInt();
 			System.out.println("Please input a number.");
 			int b = in.nextInt();
 			System.out.println("Please input a number.");
 			int c = in.nextInt();
-			ps3.loneSum(a, b, c); **/
+			ps3.loneSum(a, b, c); 
 			
 			//ex 7
+			System.out.println("Exercise 7");
 			System.out.println("Please input a number.");
 			int a = in.nextInt();
 			System.out.println("Please input a number.");
 			int b = in.nextInt();
 			System.out.println("Please input a number.");
 			int c = in.nextInt();
-			ps3.luckySum(a, b, c);
+			ps3.luckySum(a, b, c); 
 			
+			//ex 8
+			System.out.println("Exercise 8");
+			System.out.println("Please input a number.");
+			int n = in.nextInt();
+			ps3.factorialWithFor(n); **/
+			
+			//ex 9
+			System.out.println("Exercise 9");
+			System.out.println("Please input a number.");
+			int n = in.nextInt();
+			ps3.factorialWithWhile(n);
 			
 			in.close();
 	}
@@ -235,11 +254,37 @@ public class ProblemSet3 {
 	}
 	
 	public void factorialWithFor(int n) {
-		
+	    //keep original number
+	    int nOriginal = n;
+	    //(example of 5) set i to 5 and while i is greater than 0 then keep decreasing i
+		for (int i = n; i > 0; i--) {
+		    //if its the first instance
+		    if (i == n) {
+		        //just itself
+		        n = n * 1;
+		    }
+		    //otherwise just multiply by 4, then 3, etc.
+		    else {
+		        n = n * i;
+		    }
+		}
+		System.out.println(nOriginal + "! = " + n);
 	}
 	
 	public void factorialWithWhile(int n) {
-		
+	    int nOriginal = n;
+		int i = n;
+		while (i > 0) {
+		    if (i == n) {
+		        n = n * 1;
+		        i--;
+		    }
+		    else {
+		        n = n * i;
+		        i--;
+		    }
+		}
+		System.out.println(nOriginal + "! = " + n);
 	}
 	
 	public void isPrime(int n) {
