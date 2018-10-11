@@ -85,13 +85,19 @@ public class ProblemSet3 {
 			System.out.println("Exercise 8");
 			System.out.println("Please input a number.");
 			int n = in.nextInt();
-			ps3.factorialWithFor(n); **/
+			ps3.factorialWithFor(n); 
 			
 			//ex 9
 			System.out.println("Exercise 9");
 			System.out.println("Please input a number.");
 			int n = in.nextInt();
-			ps3.factorialWithWhile(n);
+			ps3.factorialWithWhile(n); **/
+			
+			//ex 9
+			System.out.println("Exercise 10");
+			System.out.println("Please input a number.");
+			int n = in.nextInt();
+			ps3.isPrime(n);
 			
 			in.close();
 	}
@@ -288,6 +294,28 @@ public class ProblemSet3 {
 	}
 	
 	public void isPrime(int n) {
-		
+	    boolean prime = false;
+		int nOriginal = n;
+		int i = n;
+		//tried using same code as before and i think it worked..
+		while (i > 0) {
+		    if (i == n) {
+		        n = nOriginal * 1;
+		        i--;
+		    }
+		    else {
+		        n = nOriginal % i;
+		        i--;
+		            if (n == 0) {
+		                prime = true;
+		            }
+		    }
+		}
+		if (prime == true) {
+		    System.out.println(nOriginal + " is not prime.");
+		}
+		if (prime == false) {
+		    System.out.println(nOriginal + " is prime.");
+		}
 	}
 }
