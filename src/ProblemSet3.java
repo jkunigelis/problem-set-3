@@ -24,7 +24,7 @@ public class ProblemSet3 {
 			
 			//ex 1
 			
-			/**System.out.println("Exercise 1");
+			System.out.println("Exercise 1");
 			System.out.println("Please input number for date.");
 			int date = in.nextInt();
 			System.out.println("Please input number for you.");
@@ -91,7 +91,7 @@ public class ProblemSet3 {
 			System.out.println("Exercise 9");
 			System.out.println("Please input a number.");
 			int n = in.nextInt();
-			ps3.factorialWithWhile(n); **/
+			ps3.factorialWithWhile(n);
 			
 			//ex 9
 			System.out.println("Exercise 10");
