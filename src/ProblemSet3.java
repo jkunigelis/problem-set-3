@@ -93,7 +93,7 @@ public class ProblemSet3 {
 			int n = in.nextInt();
 			ps3.factorialWithWhile(n);
 			
-			//ex 9
+			//ex 10
 			System.out.println("Exercise 10");
 			System.out.println("Please input a number.");
 			int n = in.nextInt();
